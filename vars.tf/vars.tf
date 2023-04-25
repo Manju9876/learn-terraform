@@ -8,7 +8,7 @@ output "sample_string" {
 ###If variable is a combination of some strings then following is the syntax. ${} is mandatory if we include the variable inside a string
 
 output "sample_one" {
-  value = "value of sample_st${var.sample_string}"
+  value = "value of sample_string= ${var.sample_string}"
 }
 
 ###declaring a varible as a interger data type
@@ -36,7 +36,7 @@ variable "sample_list" {
   ]
 }
 output "sample_list" {
-  value = "var.sample-list"
+  value = "var.sample_list"
 }
 
 #data types inside the list varibale does not matter
