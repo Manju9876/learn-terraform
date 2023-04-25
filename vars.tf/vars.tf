@@ -28,8 +28,5 @@ variable "sample_list" {
   ]
 }
 
-output "sample_list_2" {
-  value = var.sample_list[2]
-}
 
 #data types inside the list varibale does not matter
