@@ -27,6 +27,15 @@ variable "sample_list" {
   true
   ]
 }
-
-
 #data types inside the list varibale does not matter
+
+#we have dictionary variable also called as map where this dict_variable holds multiple values and alos specifies the name  to each value
+
+variable "sample_dict" {
+  default = {
+    num1 = 1234
+    boolean = true
+    string1 = "manju"
+    string2 = "ajay"
+  }
+}
