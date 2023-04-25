@@ -4,3 +4,6 @@ variable "sample_sting" {
 output "sample_string" {
   value = var.sample_sting
 }
+output "sample_one" {
+  value = "value of sample_string = ${var.sample_sting}"
+}
