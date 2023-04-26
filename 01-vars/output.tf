@@ -10,7 +10,9 @@ output "sample_list_2" {
 output "sample_dict_strings" {
   value = [var.sample_dict["string1"], var.sample_dict["string2"]]
 }
-
+output "env" {
+  value = var.env
+}
 
 
 
