@@ -1,1 +1,1 @@
-sample = [1000, "manju"]
+sample = 1000
