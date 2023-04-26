@@ -1,1 +1,1 @@
-sample = 1000
+sample1 = 1000
