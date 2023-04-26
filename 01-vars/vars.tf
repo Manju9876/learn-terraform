@@ -39,3 +39,5 @@ variable "sample_dict" {
     string2 = "ajay"
   }
 }
+
+variable "env" {}
