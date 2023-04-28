@@ -40,7 +40,7 @@ resource "aws_spot_instance_request" "demo" {
   ami           = data.aws_ami.centos.image_id
   spot_price    = "0.03"
   instance_type = "t3.small"
-  spot_type     = "persistence"
+  spot_type     = "persistent"
   instance_interruption_behavior = "stop"
 
   tags = {
