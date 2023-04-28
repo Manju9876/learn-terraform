@@ -1,7 +1,4 @@
-data "aws_security_group" "selected" {
-  name = "allow-all"
-}
-
+data "aws_security_groups" "test"{}
 output "security_group_id" {
-  value = data.aws_security_group.selected
+  value = data.aws_security_groups.test
 }
