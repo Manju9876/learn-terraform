@@ -29,7 +29,7 @@ resource "aws_instance" "demo" {
 }
 resource "aws_route53_record" "demo" {
   zone_id = "Z06653061K00JAPLVF5JM"
-  name    = "frontend-dev.manju-devops.online"
+  name    = "demo-dev.manju-devops.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.demo.private_ip]
