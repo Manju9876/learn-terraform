@@ -3,6 +3,7 @@ variable "my_list" {
 }
 
 locals {
+  count = 2
   my_set = toset(var.my_list)
 }
 
