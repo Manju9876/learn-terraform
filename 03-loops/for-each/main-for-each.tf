@@ -1,7 +1,7 @@
 
 resource "null_resource" "fruits" {
 
-  count = length(var.fruits)
+ for_each = var.fruits
 
   provisioner "local-exec" {
     command =  "echo Fruit Name - ${each.key}"
@@ -9,7 +9,6 @@ resource "null_resource" "fruits" {
 }
 
 variable "fruits" {
-  type = map(number)
   default {
     apple = 10
     banana = 20
