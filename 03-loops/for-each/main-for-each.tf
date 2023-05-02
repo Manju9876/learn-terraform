@@ -9,6 +9,7 @@ resource "null_resource" "fruits" {
 }
 
 variable "fruits" {
+  type = map(number)
   default {
     apple = 10
     banana = 20
