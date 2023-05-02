@@ -49,6 +49,6 @@ variable "persons" {
 resource "null_resource" "person_name" {
   count = 10
   provisioner "local-exec" {
-        command =  "echo person name  - ${var.persons}"
+        command =  "echo person name  - ${var.persons[count.index]}"
      }
 }
