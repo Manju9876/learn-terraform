@@ -44,14 +44,29 @@ variable "fruits" {
 }
 
 
-resource "null_resource" "person_name" {
-  count = 3
+#resource "null_resource" "person_name" {
+#  count = 3
+#
+#  provisioner "local-exec" {
+#    command = "echo persons name  - ${var.persons[count.index]}
+#  }
+#}
+#
+#variable "persons" {
+#  default = ["Manju", "parmesh", "sundar"]
+#}
 
-  provisioner "local-exec" {
-    command = "echo persons name  - ${var.persons[count.index]}
-  }
+// For-each on a list
+variable "vegetables" {
+  default = ["carrot ", "capsicum"]
 }
 
-variable "persons" {
-  default = ["Manju", "parmesh", "sundar"]
+resource "null_resource" "vegetables" {
+
+  for_each = toset(var.vegetables)
+
+  provisioner "local-exec" {
+    command = "echo Fruit Name - ${each.key}"
+  }
+
 }
