@@ -43,12 +43,15 @@
 #  }
 #}
 
-variable "persons" {
-  default = ["Manju", "parmesh", "sundar"]
-}
+
 resource "null_resource" "person_name" {
   count = 10
+
   provisioner "local-exec" {
-        command =  "echo person name  - ${var.persons[count.index]}"
-     }
+    command = "echo persons name  - ${var.persons[count.index % length(var.persons)]}"
+  }
+}
+
+variable "persons" {
+  default = ["Manju", "parmesh", "sundar"]
 }
