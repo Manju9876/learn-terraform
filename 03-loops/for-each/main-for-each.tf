@@ -9,7 +9,7 @@ resource "null_resource" "fruits" {
 }
 
 
-resource "null_resource" "fruits" {
+resource "null_resource" "fruits1" {
 
   for_each = var.fruits1
 
