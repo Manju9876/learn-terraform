@@ -47,5 +47,8 @@ variable "persons" {
   default = ["Manju", "parmesh", "sundar"]
 }
 resource "null_resource" "person_name" {
-  count = length(var.persons)
+  count = 10
+  provisioner "local-exec" {
+        command =  "echo person name  - ${var.persons}"
+     }
 }
