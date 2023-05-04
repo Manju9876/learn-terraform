@@ -4,5 +4,5 @@ module "sample" {
 }
 
 module "dummy" {
-  source = "dummy"
+  source = "./dummy"
 }
