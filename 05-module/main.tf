@@ -3,3 +3,6 @@ module "sample" {
   input = "xyz"
 }
 
+module "sample1" {
+  source = "./module1"
+}
