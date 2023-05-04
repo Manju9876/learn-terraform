@@ -10,7 +10,7 @@ data "aws_ami" "centos" {
 
    ami                    = data.aws_ami.centos.image_id
    instance_type          = "t3.micro"
-   vpc_security_group_id = var.sg_id
+   vpc_security_group_ids = [var.sg_id]
 
 
    tags = {
