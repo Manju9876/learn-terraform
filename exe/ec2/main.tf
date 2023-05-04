@@ -14,7 +14,7 @@ data "aws_ami" "centos" {
 
 
    tags = {
-     Name = test
+     Name = "test"
    }
 }
 
